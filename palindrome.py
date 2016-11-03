@@ -1,19 +1,26 @@
-def check_palindrome(message):
-	list1=[]
-	list2=[]
-	for i in message:
-		list1.append(i)
-	list1.reverse()
-	for j in list1:
-		list2.append(j)
-	
-	
-	a=set(list1).intersection(list2)
-	if(a!=0):
-                          print("palindrome")
-                  else:
-                          print("not a palindrome")
-	
 
-message="CIVIC"
-check_palindrome(message)
+	
+def comp(list1,list2):
+	message="a palindrome"
+	message1="Not a palindrome"
+	for i in list1:
+		for j in list2:
+			if(i==j):
+				return('Palindrome')
+			else:
+				return('Not a Palindrome')
+
+message="doge"
+list1=[]
+list2=[]
+for i in message:
+	list1.append(i)
+
+for j in list1:
+	list2.append(j)
+list2.reverse()
+a=comp(list1,list2)
+
+print(a)
+
+
